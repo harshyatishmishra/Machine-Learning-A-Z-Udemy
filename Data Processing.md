@@ -1,7 +1,6 @@
 
-Use Spyder and Python
 
-1. Data Processing
+# 1. Data Processing
   ### Importing library
 
       import numpy as numpy
@@ -31,4 +30,15 @@ Use Spyder and Python
    ```
    strategy='mean/median/mode'
      
-    
+  ### Data Categorization 
+  ML is basically uses the mathematical equation. So we need to change or caegorize the String fields into the Number.
+  LabelEncoder : Encode labels with value between 0 and n_classes-1.
+  
+  ```
+  from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+  labelencoder_X = LabelEncoder()
+  X[:, 0] = labelencoder_X.fit_transform(X[:, 0]) # this method takes first column , index. Column which we need to categories
+  onehotencoder = OneHotEncoder(categorical_features = [0])
+  X = onehotencoder.fit_transform(X).toarray()
+  ```
+  
