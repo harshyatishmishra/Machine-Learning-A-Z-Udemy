@@ -13,15 +13,15 @@ Use Spyder and Python
     
     myDataSet = panda.read_csv('DataSet.csv');          // read_csv() will read the data into the DataFrame and iterating or breaking of the file into chunks.
     
-  ### Read all the columns expects the last one###
+  ### Read all the columns expects the last one
     
     values = myDataSet.iloc[:,:-1].values
     
-   ### Read the last columns only###
+   ### Read the last columns only
     
     lastColValues = myDataSet.iloc[:,3].values
     
-   ### Handle Missing data in the fields - Integer###
+   ### Handle Missing data in the fields - Integer
    * Replace by the Mean of values in the column that contains the missing data
    ```
    from sklearn.preprocessing import Imputer
